@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Social Proximity Test</title>
+  <style>
+  	.challenge{
+  		display: none;
+  	}
+  	.device{
+  		padding: 10px;
+  		float: left;
+  		margin: 10px;
+  		border: 1px solid;
+  	}
+  	.inprogress{
+  		display: none;
+  	}
+  </style>
+  <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+  <script>
+  	$(document).ready(function(){
+		var inprox = [];
+		var users = [];
+		var parent;
+		var challenge;
+  		$.getJSON("http://cjcornell.com/bluegame/REST/users/", function(data){
+  			data = data['body'];
+  			$.each(data, function(key, val){
+  				users[val.m_iID + ""] = val;
+  				$("select[name='id']").append("<option value=" + val.m_iID + ">" + val.m_iID + "</option>");
+  				$("select[name='id']").change();
+  				
+  				
+  			});
+  		});
+  		
+  		$("select[name='id']").change(function(){
+  			var uid = $(this).val() + "";
+  			var parent = $(this).parents("div.device");
+  			var username = users[uid].m_strName;
+  			var mac = users[uid].m_strMac;
+  			var games = users[uid].m_iGamesFin;
+  			if(username==="")
+  				username = "Empty";
+  			if(mac==="")
+  				mac = "Empty";
+  			if(games==="")
+  				games = "Empty";
+  			parent.find(".username").val(username);
+  			parent.find(".macaddress").val(mac);
+  			parent.find(".games").val(games);
+  		});
+  		
+  		$(".proximity").change(function(){
+  			var parent = $(this).parents("div.device");
+  			var uid = parent.find("select[name='id']").val() + "";
+  			if($(this).attr("checked")=="checked"){
+	  			if(inprox.length==1){
+	  				$(".proximity").not(":checked").attr("disabled", "true");
+	  			}
+	  			inprox.push(users[uid].m_strMac);
+  			}else{
+  				inprox.splice(inprox.indexOf(users[uid].m_strMac), 1);
+  				if(inprox.length==1){
+  					$(".proximity").removeAttr("disabled");
+  				}
+  			}
+  		});
+
+		$("#getchallenge").click(function(){
+			if(inprox.length==2){
+				$("#getchallenge").css("display", "none");
+				$.getJSON("http://cjcornell.com/bluegame/REST/getChallenge/" + inprox[0] + "/" + inprox[1], function(data){
+					$("#description").text(data.body.m_strInstr);
+					$(".challenge").css("display", "block");
+					challenge = data.body;
+				});
+			}else{
+				alert("Please select two close-by users");
+			}
+		});
+		
+		$(".accept").click(function(){
+						$(".challenge").css("display", "none");
+			$.getJSON("http://cjcornell.com/bluegame/REST/updateChallenge/" + inprox[0] + "/" + challenge.m_iID + "/accept", function(data){
+					$.getJSON("http://cjcornell.com/bluegame/REST/updateChallenge/" + inprox[1] + "/" + challenge.m_iID + "/accept", function(data){
+						$(".inprogress").css("display", "block");
+					});
+				});
+		});
+		$(".reject").click(function(){
+			if(confirm("Are you sure you want to reject? This will reset the page.")){
+				$.getJSON("http://cjcornell.com/bluegame/REST/updateChallenge/" + inprox[0] + "/" + challenge.m_iID + "/deny", function(data){
+					$.getJSON("http://cjcornell.com/bluegame/REST/updateChallenge/" + inprox[1] + "/" + challenge.m_iID + "/deny", function(data){
+						window.location.reload();
+					});
+				});
+			}
+		});
+		
+		$(".success").click(function(){
+						$(".inprogress").css("display", "none");
+			$.getJSON("http://cjcornell.com/bluegame/REST/updateChallenge/" + inprox[0] + "/" + challenge.m_iID + "/success", function(data){
+					$.getJSON("http://cjcornell.com/bluegame/REST/updateChallenge/" + inprox[1] + "/" + challenge.m_iID + "/success", function(data){
+						alert("Server updated with success");
+						$("#getchallenge").css("display", "block");
+					});
+				});
+		});
+		$(".failure").click(function(){
+						$(".inprogress").css("display", "none");
+			$.getJSON("http://cjcornell.com/bluegame/REST/updateChallenge/" + inprox[0] + "/" + challenge.m_iID + "/fail", function(data){
+					$.getJSON("http://cjcornell.com/bluegame/REST/updateChallenge/" + inprox[1] + "/" + challenge.m_iID + "/fail", function(data){
+						alert("Server updated with failure");
+						$("#getchallenge").css("display", "block");
+					});
+				});
+		});
+		
+  	});
+  </script>
+</head>
+<body>
+	<div id="device1" class="device">
+		<form class="devform">
+			<p><label for="id">Select an ID: </label><select name="id"></select></p>
+			<div class="userinfo">
+				<p><label for="username">Username: </label><input type="text" class="username" disabled="true" /></p>
+				<p><label for="macaddress">MAC Address: </label><input type="text" class="macaddress" disabled="true" /></p>
+				<p><label for="games">Games Finished: </label><input type="text" class="games" disabled="true" /></p>
+			</div>
+			<p><input type="checkbox" class="proximity" name="proximity"/><label for="proximity">In Proximity</label></p>
+			</div>
+		</form>
+	</div>
+	<div id="device2" class="device">
+		<form class="devform">
+			<p><label for="id">Select an ID: </label><select name="id"></select></p>
+			<div class="userinfo">
+				<p><label for="username">Username: </label><input type="text" class="username" disabled="true" /></p>
+				<p><label for="macaddress">MAC Address: </label><input type="text" class="macaddress" disabled="true" /></p>
+				<p><label for="games">Games Finished: </label><input type="text" class="games" disabled="true" /></p>
+			</div>
+			<p><input type="checkbox" class="proximity" name="proximity"/><label for="proximity">In Proximity</label></p>
+		</form>
+	</div>
+	<div id="device3" class="device">
+		<form class="devform">
+			<p><label for="id">Select an ID: </label><select name="id"></select></p>
+			<div class="userinfo">
+				<p><label for="username">Username: </label><input type="text" class="username" disabled="true" /></p>
+				<p><label for="macaddress">MAC Address: </label><input type="text" class="macaddress" disabled="true" /></p>
+				<p><label for="games">Games Finished: </label><input type="text" class="games" disabled="true" /></p>
+			</div>
+			<p><input type="checkbox" class="proximity" name="proximity"/><label for="proximity">In Proximity</label></p>
+		</form>
+	</div>
+	<div id="device4" class="device">
+		<form class="devform">
+			<p><label for="id">Select an ID: </label><select name="id"></select></p>
+			<div class="userinfo">
+				<p><label for="username">Username: </label><input type="text" class="username" disabled="true" /></p>
+				<p><label for="macaddress">MAC Address: </label><input type="text" class="macaddress" disabled="true" /></p>
+				<p><label for="games">Games Finished: </label><input type="text" class="games" disabled="true" /></p>
+			</div>
+			<p><input type="checkbox" class="proximity" name="proximity"/><label for="proximity">In Proximity</label></p>
+		</form>
+	</div>
+	<div id="device5" class="device">
+		<form class="devform">
+			<p><label for="id">Select an ID: </label><select name="id"></select></p>
+			<div class="userinfo">
+				<p><label for="username">Username: </label><input type="text" class="username" disabled="true" /></p>
+				<p><label for="macaddress">MAC Address: </label><input type="text" class="macaddress" disabled="true" /></p>
+				<p><label for="games">Games Finished: </label><input type="text" class="games" disabled="true" /></p>
+			</div>
+			<p><input type="checkbox" class="proximity" name="proximity"/><label for="proximity">In Proximity</label></p>
+		</form>
+	</div>
+	<p style="clear: both;"><button id="getchallenge">Get Challenge</button></p>
+	<div class="challenge">
+	<p>Here is the challenge:</p>
+	<div id="description"></div>
+	<p><button class="accept" type="submit">Accept</button>
+	<button class="reject" type="submit">Reject</button></p>
+	</div>
+	<div class="inprogress">
+		<p>Was the challenge completed?</p>
+		<p>
+			<button class="success">Success</button>
+			<button class="failure">Failure</button>
+		</p>
+	</div>
+</body>
+</html>

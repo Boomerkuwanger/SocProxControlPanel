@@ -76,14 +76,15 @@ class MySQL_Functions implements IDB_Functions {
     // Add ChallengeInstance and return its corresponding ID in the table
     public static function AddChallengeInstance($challengeInstance)
     {
-        $sql = "INSERT INTO ChallengeInstance (ChallengeID, UserIDs, Status) VALUES(?,?,?)";
+        $sql = "INSERT INTO ChallengeInstance (ChallengeID, UserIDs, Status, Date) VALUES(?,?,?,?)";
         $aToInsert = array();
         $aToInsert[] = $challengeInstance->ChallengeID();
         $aToInsert[] = $challengeInstance->UserIDs();
         $aToInsert[] = 'pending';
+        $aToInsert[] = $challengeInstance->DateTime();
         self::getDB()->executeAction($sql, $aToInsert);
 
-        $sql = "SELECT ChallengeInstanceID FROM ChallengeInstance WHERE ChallengeId=? AND UserIDs=? AND Status=? ORDER By ChallengeInstanceID DESC";
+        $sql = "SELECT ChallengeInstanceID FROM ChallengeInstance WHERE ChallengeId=? AND UserIDs=? AND Status=? AND Date=? ORDER By ChallengeInstanceID DESC";
         $result = self::getDB()->executeQuery($sql, $aToInsert);
         return $result[0]['challengeinstanceid'];
     }

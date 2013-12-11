@@ -46,7 +46,7 @@ class MySQL_Controller {
     // function that executes queries (GET) on a table
     public function executeQuery($sql, $aParams=null) {
         //echo "==================================" . "<br>";
-       // echo "QUERY: " . $sql . "<br>";
+        //echo "QUERY: " . $sql . "<br>";
 
         $query = $this->handler->prepare($sql);
         if(isset($aParams)) {
@@ -55,9 +55,9 @@ class MySQL_Controller {
                 //echo "$key  =>  $value" . "<br>";
             }
         }
-       // echo "**********************************" . "<br>";
+        //echo "**********************************" . "<br>";
         $query->execute();
-        // echo $this->handler->errorCode();
+        //echo $this->handler->errorCode();
         $aResult = $this->convertKeys($query->fetchAll());
         //echo "SQL : " . $sql . " Count of params: " . count($aParams) . "<br>";
         return $aResult;

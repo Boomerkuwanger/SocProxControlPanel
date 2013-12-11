@@ -23,82 +23,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="testcontroller.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="testcontroller.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/REST/testcontroller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="215" column="34" selection-start="6696" selection-end="6710" vertical-scroll-proportion="0.0" vertical-offset="3464" max-vertical-offset="15351">
+            <state line="454" column="9" selection-start="14973" selection-end="14973" vertical-scroll-proportion="0.375" vertical-offset="7571" max-vertical-offset="15351">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RefreshChallengeInstance.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Functions/RefreshChallengeInstance.php">
+      <file leaf-file-name="AddChallengeInstance.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Functions/AddChallengeInstance.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="56" selection-start="1485" selection-end="1485" vertical-scroll-proportion="-10.461538" vertical-offset="408" max-vertical-offset="1428">
+            <state line="16" column="9" selection-start="490" selection-end="490" vertical-scroll-proportion="-6.5384617" vertical-offset="102" max-vertical-offset="952">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChallengeInstance.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ChallengeInstance.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classes/ChallengeInstance.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="25" selection-start="273" selection-end="273" vertical-scroll-proportion="0.38059703" vertical-offset="0" max-vertical-offset="1292">
+            <state line="71" column="3" selection-start="2077" selection-end="2212" vertical-scroll-proportion="-7.8846154" vertical-offset="1002" max-vertical-offset="1428">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetActiveChallenges.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Functions/GetActiveChallenges.php">
+      <file leaf-file-name="ChallengeInstanceChallenge.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/REST/ChallengeInstanceChallenge.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="23" selection-start="446" selection-end="487" vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="595">
+            <state line="2" column="6" selection-start="13" selection-end="13" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="3349">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="simulation.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/finaldashboard/simulation.php">
+      <file leaf-file-name="DB_Controller.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Database/DB_Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="106" selection-start="3915" selection-end="3965" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="4012">
-              <folding>
-                <marker date="1383169068922" expanded="true" signature="479:485" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="1452:2203" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="1465:1758" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="1527:1749" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="1762:2186" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="1950:2172" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="2932:3646" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="2943:3222" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="3003:3215" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="3226:3631" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="3407:3619" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="3825:3830" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="4200:4330" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="4362:4531" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="4719:4724" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="4992:5123" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="5149:5325" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="5489:7741" placeholder="..." />
-                <marker date="1383169068922" expanded="true" signature="5529:7720" placeholder="{...}" />
-                <marker date="1383169068922" expanded="true" signature="5716:6725" placeholder="{...}" />
-                <marker date="1383169068922" expanded="true" signature="5778:5865" placeholder="{...}" />
-                <marker date="1383169068922" expanded="true" signature="5931:6122" placeholder="{...}" />
-                <marker date="1383169068922" expanded="true" signature="5965:6091" placeholder="{...}" />
-                <marker date="1383169068922" expanded="true" signature="6176:6371" placeholder="{...}" />
-                <marker date="1383169068922" expanded="true" signature="6210:6336" placeholder="{...}" />
-                <marker date="1383169068922" expanded="true" signature="6414:6602" placeholder="{...}" />
-                <marker date="1383169068922" expanded="true" signature="6468:6526" placeholder="{...}" />
-                <marker date="1383169068922" expanded="true" signature="6532:6592" placeholder="{...}" />
-                <marker date="1383169068922" expanded="true" signature="6608:6719" placeholder="{...}" />
-                <marker date="1383169068922" expanded="true" signature="6773:7064" placeholder="{...}" />
-                <marker date="1383169068922" expanded="true" signature="6892:6979" placeholder="{...}" />
-                <marker date="1383169068922" expanded="true" signature="7112:7325" placeholder="{...}" />
-                <marker date="1383169068922" expanded="true" signature="7375:7614" placeholder="{...}" />
-                <marker date="1383169068922" expanded="true" signature="7651:7706" placeholder="{...}" />
-              </folding>
+            <state line="50" column="38" selection-start="2358" selection-end="2358" vertical-scroll-proportion="-6.3076925" vertical-offset="686" max-vertical-offset="6817">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MySQL_Function.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Database/MySQL_Function.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="87" column="38" selection-start="3999" selection-end="3999" vertical-scroll-proportion="-10.230769" vertical-offset="1213" max-vertical-offset="7701">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,7 +80,7 @@
       <file leaf-file-name="MySQL_Controller.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Database/MySQL_Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="5" selection-start="2885" selection-end="2885" vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="1598">
+            <state line="48" column="39" selection-start="2318" selection-end="2318" vertical-scroll-proportion="-4.5384617" vertical-offset="698" max-vertical-offset="1598">
               <folding />
             </state>
           </provider>
@@ -129,10 +103,12 @@
         <option value="$PROJECT_DIR$/Database/DumpToSQL.php" />
         <option value="$PROJECT_DIR$/Functions/GetUserStats.php" />
         <option value="$PROJECT_DIR$/Functions/GetActiveChallenges.php" />
-        <option value="$PROJECT_DIR$/Database/MySQL_Controller.php" />
-        <option value="$PROJECT_DIR$/Database/MySQL_Function.php" />
         <option value="$PROJECT_DIR$/REST/testcontroller.php" />
         <option value="$PROJECT_DIR$/Classes/ChallengeInstance.php" />
+        <option value="$PROJECT_DIR$/Functions/AddChallengeInstance.php" />
+        <option value="$PROJECT_DIR$/Database/MySQL_Function.php" />
+        <option value="$PROJECT_DIR$/Database/MySQL_Controller.php" />
+        <option value="$PROJECT_DIR$/REST/ChallengeInstanceChallenge.php" />
       </list>
     </option>
   </component>
@@ -190,6 +166,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SocProxControlPanel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SocProxControlPanel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SocProxControlPanel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="REST" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -498,19 +488,19 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18707483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1689394" sideWeight="0.8122867" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1689394" sideWeight="0.81292516" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1219697" sideWeight="0.48469388" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1621212" sideWeight="0.8122867" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1621212" sideWeight="0.81292516" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31569967" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39761093" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18771331" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -619,16 +609,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Functions/AddUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="326" selection-end="326" vertical-scroll-proportion="-0.65384614" vertical-offset="187" max-vertical-offset="1309" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/IDB_Functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="28" selection-start="2013" selection-end="2013" vertical-scroll-proportion="-23.538462" vertical-offset="0" max-vertical-offset="833" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Challenge.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="52" selection-start="1603" selection-end="1614" vertical-scroll-proportion="-22.846153" vertical-offset="154" max-vertical-offset="2550" />
@@ -661,71 +641,45 @@
         <state line="18" column="20" selection-start="372" selection-end="372" vertical-scroll-proportion="0.46153846" vertical-offset="318" max-vertical-offset="1870" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Database/MySQL_Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="5" selection-start="2885" selection-end="2885" vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="1598">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/DB_Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="40" selection-start="3814" selection-end="3827" vertical-scroll-proportion="-6.6923075" vertical-offset="1577" max-vertical-offset="6817">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/finaldashboard/simulation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="106" selection-start="3915" selection-end="3965" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="4012">
           <folding>
-            <marker date="1383169068922" expanded="true" signature="479:485" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="1452:2203" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="1465:1758" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="1527:1749" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="1762:2186" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="1950:2172" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="2932:3646" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="2943:3222" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="3003:3215" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="3226:3631" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="3407:3619" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="3825:3830" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="4200:4330" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="4362:4531" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="4719:4724" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="4992:5123" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="5149:5325" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="5489:7741" placeholder="..." />
-            <marker date="1383169068922" expanded="true" signature="5529:7720" placeholder="{...}" />
-            <marker date="1383169068922" expanded="true" signature="5716:6725" placeholder="{...}" />
-            <marker date="1383169068922" expanded="true" signature="5778:5865" placeholder="{...}" />
-            <marker date="1383169068922" expanded="true" signature="5931:6122" placeholder="{...}" />
-            <marker date="1383169068922" expanded="true" signature="5965:6091" placeholder="{...}" />
-            <marker date="1383169068922" expanded="true" signature="6176:6371" placeholder="{...}" />
-            <marker date="1383169068922" expanded="true" signature="6210:6336" placeholder="{...}" />
-            <marker date="1383169068922" expanded="true" signature="6414:6602" placeholder="{...}" />
-            <marker date="1383169068922" expanded="true" signature="6468:6526" placeholder="{...}" />
-            <marker date="1383169068922" expanded="true" signature="6532:6592" placeholder="{...}" />
-            <marker date="1383169068922" expanded="true" signature="6608:6719" placeholder="{...}" />
-            <marker date="1383169068922" expanded="true" signature="6773:7064" placeholder="{...}" />
-            <marker date="1383169068922" expanded="true" signature="6892:6979" placeholder="{...}" />
-            <marker date="1383169068922" expanded="true" signature="7112:7325" placeholder="{...}" />
-            <marker date="1383169068922" expanded="true" signature="7375:7614" placeholder="{...}" />
-            <marker date="1383169068922" expanded="true" signature="7651:7706" placeholder="{...}" />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1383169068922" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/MySQL_Function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="27" selection-start="6393" selection-end="6393" vertical-scroll-proportion="-0.997992" vertical-offset="3081" max-vertical-offset="7684" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/REST/testcontroller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="215" column="34" selection-start="6696" selection-end="6710" vertical-scroll-proportion="0.0" vertical-offset="3464" max-vertical-offset="15351">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -743,9 +697,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Database/DB_Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="38" selection-start="2358" selection-end="2358" vertical-scroll-proportion="-6.3076925" vertical-offset="686" max-vertical-offset="6817">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/MySQL_Function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="38" selection-start="3999" selection-end="3999" vertical-scroll-proportion="-10.230769" vertical-offset="1213" max-vertical-offset="7701">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/MySQL_Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="39" selection-start="2318" selection-end="2318" vertical-scroll-proportion="-4.5384617" vertical-offset="698" max-vertical-offset="1598">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/ChallengeInstance.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="273" selection-end="273" vertical-scroll-proportion="0.38059703" vertical-offset="0" max-vertical-offset="1292">
+        <state line="71" column="3" selection-start="2077" selection-end="2212" vertical-scroll-proportion="-7.8846154" vertical-offset="1002" max-vertical-offset="1428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Functions/AddChallengeInstance.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="9" selection-start="490" selection-end="490" vertical-scroll-proportion="-6.5384617" vertical-offset="102" max-vertical-offset="952">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/REST/ChallengeInstanceChallenge.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="13" selection-end="13" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="3349">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/REST/testcontroller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="454" column="9" selection-start="14973" selection-end="14973" vertical-scroll-proportion="0.375" vertical-offset="7571" max-vertical-offset="15351">
           <folding />
         </state>
       </provider>

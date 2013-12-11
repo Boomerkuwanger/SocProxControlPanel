@@ -22,6 +22,7 @@ class AddChallengeInstance {
 		$challengeInstance = new ChallengeInstance();
 		$challengeInstance->ChallengeID($challengeID);
 		$challengeInstance->UserIDs($userIDs);
+        $challengeInstance->DateTime(date("Y-m-d H:i:s"));
 		$lastID = DB_Controller::AddChallengeInstance($challengeInstance);
         
         // Get the challenge instance that was just created from the DB. This is needed for challenge acceptance creation

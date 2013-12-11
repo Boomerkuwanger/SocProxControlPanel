@@ -24,7 +24,8 @@ class ChallengeInstanceChallenge {
     public $m_strDesc;
     public $m_strUsername1;
     public $m_strUsername2;
-    
+    public $m_oDate;
+
     public function __construct($aValues = null){
         if (isset($aValues)){
             $this->m_iID = $aValues['challengeinstanceid'];
@@ -47,6 +48,7 @@ class ChallengeInstanceChallenge {
             $this->m_iMaxPlayers = $aValues['maxplayers'];
             $this->m_iVerificationID = $aValues['verificationid'];
             $this->m_strDesc = $aValues['description'];
+            $this->m_oDate = $aValues['date'];
         }
     }
     
@@ -154,7 +156,13 @@ class ChallengeInstanceChallenge {
         if (isset($input)) $this->m_strUsername2 = $input;
         return $this->m_strUsername2;
     }
-    
+
+    public function DateTime ($input = null)
+    {
+        if(isset($input)) $this->m_oDate = $input;
+        return $this->m_oDate;
+    }
+
     public function ConvertFrom ($challenge, $challengeInstance)
 	{
 		$this->m_iID = $challengeInstance->ID();
@@ -177,6 +185,7 @@ class ChallengeInstanceChallenge {
 		$this->m_iMaxPlayers = $challenge->MaxPlayers();
 		$this->m_iVerificationID = $challenge->VerificationID();
 		$this->m_strDesc = $challenge->Description();
+        $this->m_oDate = $challengeInstance->DateTime();
 	}
 }
 

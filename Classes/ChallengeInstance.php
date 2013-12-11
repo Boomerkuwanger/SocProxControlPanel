@@ -11,7 +11,8 @@ class ChallengeInstance {
     public $m_strAccepts;
     public $m_oChallenge;
     public $m_aOpponents;
-    
+    public $m_oDate;
+
     public function __construct($aValues = null){
         if (isset($aValues)){
             $this->m_iID = $aValues['challengeinstanceid'];
@@ -19,6 +20,7 @@ class ChallengeInstance {
             $this->m_strUserIDs = $aValues['userids'];
             $this->m_strStatus = $aValues['status'];
             $this->m_strAccepts = $aValues['accepts'];
+            $this->m_oDate = $aValues['date'];
         }
     }
     
@@ -65,6 +67,12 @@ class ChallengeInstance {
     public function Accepts ($input = null){
         if (isset($input)) $this->m_strAccepts = $input;
         return $this->m_strAccepts;
+    }
+
+    public function DateTime ($input = null)
+    {
+        if(isset($input)) $this->m_oDate = $input;
+        return $this->m_oDate;
     }
 }
 

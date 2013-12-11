@@ -152,6 +152,7 @@ class TestController
 			return new Error(100, 'Usage: /register/MACAddress');
 		}
     }
+
 	/**
      * Adds Game
      *
@@ -178,6 +179,7 @@ class TestController
 			return new Error(100, 'Usage: /addGame/:name/:description/:criteria/:points');
 		}
 	}
+
 	/**
      * Adds Challenge
      *
@@ -203,6 +205,7 @@ class TestController
 			return new Error(100, 'Usage: /addChallenge/:name/:instructions/:gameid/:minplayers/:maxplayers/:verificationid');
 		}
 	}
+
 	/**
      * Lists challenges
      *
@@ -215,6 +218,7 @@ class TestController
         if ($mac1 && $mac2) {
             // Get the challenges from both users
             $challenges1 = GetActiveChallenges::Execute($mac1);
+            //return "Got here : $challenges1";
 			$challenges2 = GetActiveChallenges::Execute($mac2);
 			if ((count($challenges1) == 0) || (count($challenges2) == 0))
 			{

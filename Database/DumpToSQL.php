@@ -15,6 +15,7 @@ class DB_Controller {
 	private static $m_oController;
 	
 	private static function getDB(){
+        echo "DB_Controller in DumpToSQL.php";
 		if (!isset(self::$m_oController)){
 			require_once '/home/content/c/j/c/cjcornell3/html/bluegame/Database/Spreadsheet_Functions.php';
 			self::$m_oController = new Spreadsheet_Functions();

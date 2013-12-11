@@ -2,7 +2,7 @@
 	$request = "simulation";
 	include "templates/head.php"; 
 	echo '<script type="text/javascript" src="./assets/js/jquery.min.js"></script>';
-						?>
+?>
 						
 <body>
 	<?php include "templates/navbar.php"; 

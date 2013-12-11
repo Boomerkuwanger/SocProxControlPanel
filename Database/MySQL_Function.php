@@ -82,9 +82,7 @@ class MySQL_Functions implements IDB_Functions {
         $aToInsert[] = $challengeInstance->UserIDs();
         $aToInsert[] = 'pending';
         self::getDB()->executeAction($sql, $aToInsert);
-        
-        // TODO: 	AFAM This comment below leads me to believe that mutual exclusion is not assured
-        // Note: Must need ORDER BY ... DESC to ensure that the last id is returned!
+
         $sql = "SELECT ChallengeInstanceID FROM ChallengeInstance WHERE ChallengeId=? AND UserIDs=? AND Status=? ORDER By ChallengeInstanceID DESC";
         $result = self::getDB()->executeQuery($sql, $aToInsert);
         return $result[0]['challengeinstanceid'];
@@ -158,23 +156,29 @@ class MySQL_Functions implements IDB_Functions {
         $aParams[] = $user->ID();
         $aPoints = self::getDB()->executeQuery($sql, $aParams);
 		$sql = "SELECT COUNT(*) FROM Game";
-       	$iNumGames = self::getDB()->executeQuery($sql);
-        if (count($aPoints) != $iNumGames) 
+       	$oCountQueryResults = self::getDB()->executeQuery($sql);
+        $iNumGames = $oCountQueryResults[0]['count(*)'];
+
+        // If this user is not playing all of the games that the opponent is playing, add them to the game they wish to play
+        // For now, this is a hack to populate the games associated with it
+        if (count($aPoints) < $iNumGames)
        	{
-			for($i = 0; $i < $iNumGames; $i++)
+            for($i = 0; $i < $iNumGames; $i++)
 			{
 	       		$sql = "INSERT INTO Points (GameID, UserID, Points, Is_Active) VALUES(?,?,?,?)";
 				$aToInsert = array();
-				$aToInsert[] = $iNumGames;
+				$aToInsert[] = $i + 1;
 				$aToInsert[] = $user->ID();
 				$aToInsert[] = "0";
 				$aToInsert[] = "1";
-				self::getDB()->executeQuery($sql, $aToInsert);
-				self::GetChallenges($user);
-	       		$sql = "SELECT * FROM Points WHERE UserId=?";
-				$aPoints = self::getDB()->executeQuery($sql, $aParams);
-			}
+                self::getDB()->executeAction($sql, $aToInsert);
+            }
+
 		}
+        //self::GetChallenges($user);
+        $sql = "SELECT * FROM Points WHERE UserId=?";
+        $aPoints = self::getDB()->executeQuery($sql, $aParams);
+
         $aChallenges = array();
         $sql = "SELECT * FROM Challenge WHERE Game_ID=?";
         foreach ($aPoints as $point){

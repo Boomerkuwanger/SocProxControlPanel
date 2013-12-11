@@ -4,13 +4,10 @@ require_once '/home/content/c/j/c/cjcornell3/html/bluegame/Classes/User.php';
 require_once '/home/content/c/j/c/cjcornell3/html/bluegame/Database/DB_Controller.php';
 
 class GetActiveChallenges {
-	
 	private static $m_oUser;
-    
     // RETURN CODES:
     // object  = success
     // -1      = no user
-	
 	public static function Execute ($macAddress){
 	    // Get the user 
 		self::$m_oUser = DB_Controller::GetUserByMac($macAddress);

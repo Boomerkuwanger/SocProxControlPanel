@@ -26,28 +26,36 @@ class MySQL_Controller {
     // This prevents SQL injection from occurring! Parameters passed in by users will be treated as strings, not as potential SQL calls
     public function executeAction($sql, $aParams=null) {
         $query = $this->handler->prepare($sql);
-//	print_r($sql . "\n" . $aParams[1]);
+        //echo "==================================" . "<br>";
+        //echo "ACTION: " . $sql . "<br>";
         if(isset($aParams)) {
             foreach($aParams as $key => &$value) {
+                //echo "$key  =>  $value" . "<br>";
+
                 // keys start at 1, not 0, for the PDO handler
                 // values have to be passed in by reference, not value, hence the pointer
                 $query->bindParam($key + 1, $value);
             }
         }
+       // echo "**********************************" . "<br>";
+
         $query->execute();
         // echo "SQL : " . $sql . " Count of params: " . count($aParams) . "<br>";
     }
     
     // function that executes queries (GET) on a table
     public function executeQuery($sql, $aParams=null) {
-        //echo "QUERY: " . $sql . "<br>";
+        //echo "==================================" . "<br>";
+       // echo "QUERY: " . $sql . "<br>";
+
         $query = $this->handler->prepare($sql);
         if(isset($aParams)) {
             foreach($aParams as $key => &$value) {
                 $query->bindParam($key + 1, $value);
-                //echo $value;
+                //echo "$key  =>  $value" . "<br>";
             }
         }
+       // echo "**********************************" . "<br>";
         $query->execute();
         // echo $this->handler->errorCode();
         $aResult = $this->convertKeys($query->fetchAll());
@@ -57,7 +65,7 @@ class MySQL_Controller {
     
     // For ease of reading, the MySQL columns have been named with "_" separating words, and have uppercase values.
     // Objects, when constructed, require that the array values are all lowercase and have no delimiters between words. Thus,
-    //      this function strips all underscores and lowercases all keys to make it consistent with the object class design
+    // this function strips all underscores and lowercases all keys to make it consistent with the object class design
     private function convertKeys($aResult) {
         $aFinalResult = array();
         foreach($aResult as $rows) {

@@ -5,7 +5,6 @@ require_once '/home/content/c/j/c/cjcornell3/html/bluegame/Classes/Stats.php';
 require_once '/home/content/c/j/c/cjcornell3/html/bluegame/Database/DB_Controller.php';
 
 class GetUserStats {
-	
 	private static $m_oStats;
 	
 	// RETURN CODES:
